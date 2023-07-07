@@ -35,7 +35,7 @@ Before running this application, make sure you have the following:
    - Add the following line to the `.env` file, replacing `YOUR_API_KEY` with your actual API key:
 
      ```
-     OPENAI_API_KEY=YOUR_API_KEY
+     SECRET_KEY=YOUR_API_KEY
      ```
 
 ## Usage
@@ -43,7 +43,7 @@ Before running this application, make sure you have the following:
 To start the chatbot in your terminal, run the following command:
 
 ```bash
-node chatbot.js
+npm start
 ```
 
 Once the chatbot is running, you can start a conversation by entering your message in the terminal. The chatbot will process your input and provide a response based on the trained language model.
@@ -56,7 +56,7 @@ If you want to modify the behavior of the chatbot, you can adjust the settings i
 
 ## Contributing
 
-Contributions are welcome! If you find any issues or want to add new features, please create a pull request or submit an issue on the [GitHub repository](https://github.com/your-username/your-repo).
+Contributions are welcome! If you find any issues or want to add new features, please create a pull request or submit an issue on the [GitHub repository](https://github.com/roshansingh10/ChatGPT-terminal-bot).
 
 ## License
 
@@ -68,4 +68,4 @@ This chatbot application is powered by OpenAI's language model, and its response
 
 ## Contact
 
-If you have any questions or suggestions regarding this application, feel free to contact the maintainer at [your-email@example.com](mailto:your-email@example.com).
+If you have any questions or suggestions regarding this application, feel free to contact the maintainer at [your-email@example.com](mailto:devroshan10@gmail.com).
