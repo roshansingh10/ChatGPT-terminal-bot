@@ -13,23 +13,19 @@ export async function chatCompletion(inputPrompt) {
 		// Update the first message
 		messages.push({role:"user",content: inputPrompt});
 		
-		const chatObject = await openai.createChatCompletion({
-			model: "gpt-3.5-turbo",
-			messages: messages,
-		});
+		const chatObject = await openai.createChatCompletion(
+			{
+				model: "gpt-3.5-turbo",
+				messages: messages,
+				stream: true
+			}
+		);
 		const responseMessage = chatObject.data.choices[0]?.message?.content;
-		if (responseMessage){
-			chatHistory.push(["user", inputPrompt]);
-			chatHistory.push(["assistant", responseMessage]);
-			return responseMessage;
-		}else{
-			console.log(chatObject.data);
-		}
+		chatHistory.push(["user", inputPrompt]);
+		chatHistory.push(["assistant", responseMessage]);
+		return responseMessage;
 	}
-	catch(error)
-	{
-		console.log(error);
+	catch(error){
+		return "Sorry! Couldn't fullfil this request right now. Try again.";
 	}
-	
 }
-
