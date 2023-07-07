@@ -1,7 +1,7 @@
 {
   "name": "chatgpt-ternimal-bot",
   "version": "1.0.0",
-  "type":"module",
+  "type": "module",
   "description": "This is a ChatGPT bot that runs on your local terminal",
   "main": "index.js",
   "scripts": {
@@ -10,8 +10,10 @@
   "author": "Roshan Singh",
   "license": "ISC",
   "dependencies": {
+    "colors": "^1.4.0",
     "dotenv": "^16.3.1",
     "openai": "^3.3.0",
+    "ora": "^6.3.1",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {

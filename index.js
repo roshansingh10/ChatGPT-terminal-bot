@@ -1,3 +1,5 @@
-import {chatCompletion} from './gpt-files/makeRequest.js';
+import {chatCompletion} from './openAI/makeRequest.js';
+import { startChat } from './chatBot/index.js';
+// const response = chatCompletion();
 
-const response = chatCompletion();
+await startChat();
