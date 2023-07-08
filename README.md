@@ -68,4 +68,4 @@ This chatbot application is powered by OpenAI's language model, and its response
 
 ## Contact
 
-If you have any questions or suggestions regarding this application, feel free to contact the maintainer at [your-email@example.com](mailto:your-email@example.com).
+If you have any questions or suggestions regarding this application, feel free to contact the maintainer at [this mail](mailto:your-email@example.com).
