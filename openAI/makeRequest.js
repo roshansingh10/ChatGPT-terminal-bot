@@ -1,7 +1,3 @@
-/**
- * Author : Roshan Singh
- * Licence: MIT
- */
 
 import { openai } from "../config/openai.js";
 
@@ -17,7 +13,6 @@ export async function chatCompletion(inputPrompt) {
       {
         model: "gpt-3.5-turbo",
         messages: messages,
-        stream: true
       }
     );
     const responseMessage = chatObject.data.choices[0]?.message?.content;
