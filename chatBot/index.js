@@ -3,7 +3,7 @@ import {chatCompletion} from "../openAI/makeRequest.js";
 import colors from "colors";
 import { oraPromise } from "ora";
 import { emoji_map } from "../config/emojis.js";
-
+import {insertHistory} from "../fileOperations/index.js";
 const userNameList = ["Me", "Use My Name"];
 let userName;
 
@@ -16,7 +16,7 @@ export async function startChat(){
 
   const index = readlineSync.keyInSelect(userNameList, "How should we address you?");
   if (index === 1){
-    userName = readlineSync.question(colors.white(`Please tell me your name${emoji_map.smiley}`));
+    userName = readlineSync.question(colors.white(`Please tell me your name ${emoji_map.smiley} `));
   } else{
     userName = userNameList[0];
   }
@@ -25,7 +25,9 @@ export async function startChat(){
     const prompt = readlineSync.question(colors.blue(`${userName}: `));
     const response = await oraPromise(chatCompletion(prompt), options);
     console.log(colors.green(`Bot: ${response}`));
-    if (prompt.toLowerCase() == "exit")
+    if (prompt.toLowerCase() == "exit"){
+      insertHistory("");
       return;
+    }
   }
 }
