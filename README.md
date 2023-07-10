@@ -1,6 +1,6 @@
 # Node.js Chatbot with OpenAI API
 
-This Node.js application allows you to create a chatbot in your local terminal using the OpenAI API. The chatbot leverages the power of OpenAI's language model to generate human-like responses to user inputs.
+This Node.js application allows you to run a chatbot in your local terminal using the OpenAI API. The chatbot leverages the power of OpenAI's language model to generate human-like responses to user inputs.
 
 ## Prerequisites
 
